@@ -14,13 +14,13 @@ const List<Color> _colorThemes = [
 class AppTheme {
   final int selectedColor;
 
-  AppTheme({
-    this.selectedColor = 0
-  }): assert(selectedColor >= 0 && selectedColor < _colorThemes.length, 'Color must between 0 and ${_colorThemes.length}');
-  
+  AppTheme({this.selectedColor = 0})
+    : assert(
+        selectedColor >= 0 && selectedColor < _colorThemes.length,
+        'Color must between 0 and ${_colorThemes.length}',
+      );
+
   ThemeData theme() {
-    return ThemeData(
-      colorSchemeSeed: _colorThemes[selectedColor]
-    );
+    return ThemeData(colorSchemeSeed: _colorThemes[selectedColor]);
   }
 }

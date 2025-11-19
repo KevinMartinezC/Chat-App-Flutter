@@ -1,4 +1,5 @@
  import 'package:chat_app/config/theme/app_theme.dart';
+import 'package:chat_app/presentation/chat/chat_screen.dart';
 import 'package:flutter/material.dart';
  
  void main() => runApp(const MyApp());
@@ -12,14 +13,7 @@ import 'package:flutter/material.dart';
        title: 'Material App',
        debugShowCheckedModeBanner: false,
        theme: AppTheme().theme(),
-       home: Scaffold(
-         appBar: AppBar(
-           title: const Text('Material App Bar'),
-         ),
-         body: const Center(
-           child: Text('Hello World'),
-         ),
-       ),
+       home: const ChatScreen()
      );
    }
  }
