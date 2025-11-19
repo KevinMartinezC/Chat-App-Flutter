@@ -1,4 +1,5 @@
- import 'package:flutter/material.dart';
+ import 'package:chat_app/config/theme/app_theme.dart';
+import 'package:flutter/material.dart';
  
  void main() => runApp(const MyApp());
  
@@ -9,6 +10,8 @@
    Widget build(BuildContext context) {
      return MaterialApp(
        title: 'Material App',
+       debugShowCheckedModeBanner: false,
+       theme: AppTheme().theme(),
        home: Scaffold(
          appBar: AppBar(
            title: const Text('Material App Bar'),
