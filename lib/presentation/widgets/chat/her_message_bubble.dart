@@ -24,7 +24,6 @@ class HerMessageBubble extends StatelessWidget {
         ),
 
         _ImageBubble(),
-
       ],
     );
   }
@@ -43,6 +42,16 @@ class _ImageBubble extends StatelessWidget {
         height: 150,
         fit: BoxFit.cover,
         "https://yesno.wtf/assets/no/11-e6b930256265890554c1464973ebba55.gif",
+        loadingBuilder: (context, child, loadingProgress) {
+          if (loadingProgress == null) return child;
+
+          return Container(
+            width: size.width * 0.7,
+            height: 150,
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: Text("Loading image.."),
+          );
+        },
       ),
     );
   }
