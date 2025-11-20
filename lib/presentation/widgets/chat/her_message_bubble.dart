@@ -1,7 +1,9 @@
+import 'package:chat_app/domain/entities/message.dart';
 import 'package:flutter/material.dart';
 
 class HerMessageBubble extends StatelessWidget {
-  const HerMessageBubble({super.key});
+  final Message message;
+  const HerMessageBubble({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +20,20 @@ class HerMessageBubble extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            "Hi, how are you?",
+            message.text,
             style: TextStyle(color: colors.onSecondary),
           ),
         ),
-
-        _ImageBubble(),
+        _ImageBubble(imageUrl: message.imageUrl!),
       ],
     );
   }
 }
 
 class _ImageBubble extends StatelessWidget {
+  final String imageUrl;
+
+  const _ImageBubble({required this.imageUrl});
   @override
   Widget build(BuildContext context) {
     //Size dimens of the pgone
@@ -41,7 +45,7 @@ class _ImageBubble extends StatelessWidget {
         width: size.width * 0.7,
         height: 150,
         fit: BoxFit.cover,
-        "https://yesno.wtf/assets/no/11-e6b930256265890554c1464973ebba55.gif",
+        imageUrl,
         loadingBuilder: (context, child, loadingProgress) {
           if (loadingProgress == null) return child;
 
