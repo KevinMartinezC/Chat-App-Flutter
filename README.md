@@ -2,6 +2,10 @@
 
 A new Flutter project.
 
+<img width="200" height="500" alt="Screenshot 2025-11-20 at 11 49 37 AM" src="https://github.com/user-attachments/assets/3c2d1623-771c-45b6-b608-d8acebbb8376" />
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
