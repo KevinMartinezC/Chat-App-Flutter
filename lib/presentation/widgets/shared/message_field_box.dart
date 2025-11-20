@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class MessageFieldBox extends StatelessWidget {
   const MessageFieldBox({super.key});
@@ -13,8 +12,6 @@ class MessageFieldBox extends StatelessWidget {
       borderSide: const BorderSide(color: Colors.transparent),
       borderRadius: BorderRadius.circular(40),
     );
-
-
     return TextFormField(
       controller: textController,
       focusNode: focusNode,

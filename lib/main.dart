@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
      return MaterialApp(
        title: 'Material App',
        debugShowCheckedModeBanner: false,
-       theme: AppTheme().theme(),
+       theme: AppTheme(selectedColor: 5).theme(),
        home: const ChatScreen()
      );
    }
