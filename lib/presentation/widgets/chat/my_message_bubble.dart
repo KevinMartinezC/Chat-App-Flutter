@@ -1,7 +1,9 @@
+import 'package:chat_app/domain/entities/message.dart';
 import 'package:flutter/material.dart';
 
 class MyMessageBubble extends StatelessWidget {
-  const MyMessageBubble({super.key});
+  final Message message;
+  const MyMessageBubble({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class MyMessageBubble extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            "Hi, how are you?",
+            message.text,
             style: TextStyle(color: colors.onPrimary),
           ),
         ),
